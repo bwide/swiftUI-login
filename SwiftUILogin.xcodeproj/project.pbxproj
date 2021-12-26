@@ -11,12 +11,14 @@
 		220456492777F3D8000AB487 /* Tests_iOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 220456482777F3D8000AB487 /* Tests_iOSLaunchTests.swift */; };
 		220456532777F3D8000AB487 /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 220456522777F3D8000AB487 /* Tests_macOS.swift */; };
 		220456552777F3D8000AB487 /* Tests_macOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 220456542777F3D8000AB487 /* Tests_macOSLaunchTests.swift */; };
-		220456562777F3D8000AB487 /* SwiftUILoginApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2204562E2777F3D6000AB487 /* SwiftUILoginApp.swift */; };
-		220456572777F3D8000AB487 /* SwiftUILoginApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2204562E2777F3D6000AB487 /* SwiftUILoginApp.swift */; };
-		220456582777F3D8000AB487 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2204562F2777F3D6000AB487 /* ContentView.swift */; };
-		220456592777F3D8000AB487 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2204562F2777F3D6000AB487 /* ContentView.swift */; };
+		220456562777F3D8000AB487 /* LoginApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2204562E2777F3D6000AB487 /* LoginApp.swift */; };
+		220456572777F3D8000AB487 /* LoginApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2204562E2777F3D6000AB487 /* LoginApp.swift */; };
+		220456582777F3D8000AB487 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2204562F2777F3D6000AB487 /* LoginView.swift */; };
+		220456592777F3D8000AB487 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2204562F2777F3D6000AB487 /* LoginView.swift */; };
 		2204565A2777F3D8000AB487 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 220456302777F3D8000AB487 /* Assets.xcassets */; };
 		2204565B2777F3D8000AB487 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 220456302777F3D8000AB487 /* Assets.xcassets */; };
+		2204566E2777F43D000AB487 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2204566D2777F43D000AB487 /* LoginModel.swift */; };
+		2204566F2777F43D000AB487 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2204566D2777F43D000AB487 /* LoginModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,8 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2204562E2777F3D6000AB487 /* SwiftUILoginApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUILoginApp.swift; sourceTree = "<group>"; };
-		2204562F2777F3D6000AB487 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		2204562E2777F3D6000AB487 /* LoginApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginApp.swift; sourceTree = "<group>"; };
+		2204562F2777F3D6000AB487 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		220456302777F3D8000AB487 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		220456352777F3D8000AB487 /* SwiftUILogin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUILogin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2204563B2777F3D8000AB487 /* SwiftUILogin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUILogin.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -49,6 +51,7 @@
 		2204564E2777F3D8000AB487 /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		220456522777F3D8000AB487 /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
 		220456542777F3D8000AB487 /* Tests_macOSLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOSLaunchTests.swift; sourceTree = "<group>"; };
+		2204566D2777F43D000AB487 /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,9 +100,9 @@
 		2204562D2777F3D6000AB487 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				2204562E2777F3D6000AB487 /* SwiftUILoginApp.swift */,
-				2204562F2777F3D6000AB487 /* ContentView.swift */,
-				220456302777F3D8000AB487 /* Assets.xcassets */,
+				2204566C2777F408000AB487 /* Supporting Files */,
+				2204566B2777F403000AB487 /* App */,
+				2204566A2777F3FC000AB487 /* Login */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -139,6 +142,31 @@
 				220456542777F3D8000AB487 /* Tests_macOSLaunchTests.swift */,
 			);
 			path = "Tests macOS";
+			sourceTree = "<group>";
+		};
+		2204566A2777F3FC000AB487 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				2204562F2777F3D6000AB487 /* LoginView.swift */,
+				2204566D2777F43D000AB487 /* LoginModel.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		2204566B2777F403000AB487 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				2204562E2777F3D6000AB487 /* LoginApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		2204566C2777F408000AB487 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				220456302777F3D8000AB487 /* Assets.xcassets */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -299,8 +327,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				220456582777F3D8000AB487 /* ContentView.swift in Sources */,
-				220456562777F3D8000AB487 /* SwiftUILoginApp.swift in Sources */,
+				220456582777F3D8000AB487 /* LoginView.swift in Sources */,
+				2204566E2777F43D000AB487 /* LoginModel.swift in Sources */,
+				220456562777F3D8000AB487 /* LoginApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,8 +337,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				220456592777F3D8000AB487 /* ContentView.swift in Sources */,
-				220456572777F3D8000AB487 /* SwiftUILoginApp.swift in Sources */,
+				220456592777F3D8000AB487 /* LoginView.swift in Sources */,
+				2204566F2777F43D000AB487 /* LoginModel.swift in Sources */,
+				220456572777F3D8000AB487 /* LoginApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -398,6 +428,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -451,6 +482,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
