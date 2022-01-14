@@ -19,6 +19,12 @@
 		2204565B2777F3D8000AB487 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 220456302777F3D8000AB487 /* Assets.xcassets */; };
 		2204566E2777F43D000AB487 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2204566D2777F43D000AB487 /* LoginModel.swift */; };
 		2204566F2777F43D000AB487 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2204566D2777F43D000AB487 /* LoginModel.swift */; };
+		22B062D4279219230008C0C4 /* LoginProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B062D3279219230008C0C4 /* LoginProtocols.swift */; };
+		22B062D5279219230008C0C4 /* LoginProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B062D3279219230008C0C4 /* LoginProtocols.swift */; };
+		22B062D727921A9C0008C0C4 /* LoginMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B062D627921A9C0008C0C4 /* LoginMocks.swift */; };
+		22B062D827921A9C0008C0C4 /* LoginMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B062D627921A9C0008C0C4 /* LoginMocks.swift */; };
+		22B062DA27921E5F0008C0C4 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B062D927921E5F0008C0C4 /* Extensions.swift */; };
+		22B062DB27921E5F0008C0C4 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B062D927921E5F0008C0C4 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +58,9 @@
 		220456522777F3D8000AB487 /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
 		220456542777F3D8000AB487 /* Tests_macOSLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOSLaunchTests.swift; sourceTree = "<group>"; };
 		2204566D2777F43D000AB487 /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
+		22B062D3279219230008C0C4 /* LoginProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginProtocols.swift; sourceTree = "<group>"; };
+		22B062D627921A9C0008C0C4 /* LoginMocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginMocks.swift; sourceTree = "<group>"; };
+		22B062D927921E5F0008C0C4 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +158,8 @@
 			children = (
 				2204562F2777F3D6000AB487 /* LoginView.swift */,
 				2204566D2777F43D000AB487 /* LoginModel.swift */,
+				22B062D3279219230008C0C4 /* LoginProtocols.swift */,
+				22B062D627921A9C0008C0C4 /* LoginMocks.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -164,6 +175,7 @@
 		2204566C2777F408000AB487 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				22B062D927921E5F0008C0C4 /* Extensions.swift */,
 				220456302777F3D8000AB487 /* Assets.xcassets */,
 			);
 			path = "Supporting Files";
@@ -328,6 +340,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				220456582777F3D8000AB487 /* LoginView.swift in Sources */,
+				22B062DA27921E5F0008C0C4 /* Extensions.swift in Sources */,
+				22B062D4279219230008C0C4 /* LoginProtocols.swift in Sources */,
+				22B062D727921A9C0008C0C4 /* LoginMocks.swift in Sources */,
 				2204566E2777F43D000AB487 /* LoginModel.swift in Sources */,
 				220456562777F3D8000AB487 /* LoginApp.swift in Sources */,
 			);
@@ -338,6 +353,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				220456592777F3D8000AB487 /* LoginView.swift in Sources */,
+				22B062DB27921E5F0008C0C4 /* Extensions.swift in Sources */,
+				22B062D5279219230008C0C4 /* LoginProtocols.swift in Sources */,
+				22B062D827921A9C0008C0C4 /* LoginMocks.swift in Sources */,
 				2204566F2777F43D000AB487 /* LoginModel.swift in Sources */,
 				220456572777F3D8000AB487 /* LoginApp.swift in Sources */,
 			);

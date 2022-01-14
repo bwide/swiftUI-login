@@ -9,30 +9,21 @@ import Foundation
 import Combine
 import SwiftUI
 
-class LoginModel: ObservableObject {
+class LoginModel: LoginModelProtocol {
+    @Published var loginResult: LoginResult = .neutral
 
     @AppStorage("username") var username: String = ""
-    @State var usernamePrompt: String = ""
-
     @AppStorage("password") var password: String = ""
-    @State var passwordPrompt: String = ""
-
-    var loginButtonTitle: String = "Login"
-
-    struct Static {
-        static var usernameTitle = "Username"
-        static var passwordTitle = "Password"
-    }
 
     // MARK: - Actions
-    func loginButtonAction() -> Void {
-        print("login")
-        print(username)
-        print(password)
+    func loginButtonAction() {
+        loginResult = .loading
+
+        DispatchQueue.global().async { [weak self] in
+            sleep(3)
+            DispatchQueue.main.async {
+                self?.loginResult = Bool.random() ? .success : .failure
+            }
+        }
     }
-
-    init() {
-
-    }
-
 }

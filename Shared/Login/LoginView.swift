@@ -6,14 +6,11 @@
 //
 
 import SwiftUI
+import Combine
 
-struct LoginView: View {
+struct LoginView<Model: LoginModelProtocol>: View {
 
-    @ObservedObject var model: LoginModel
-
-    init(model: LoginModel = LoginModel()) {
-        self.model = model
-    }
+    @EnvironmentObject var model: Model
 
     var body: some View {
         VStack(alignment: .center, spacing: 48) {
@@ -25,34 +22,47 @@ struct LoginView: View {
     }
 
     var usernameField: some View {
-        TextField(LoginModel.Static.usernameTitle, text: $model.username)
+        TextField(model.usernameTitle, text: $model.username)
     }
 
     var passwordField: some View {
-        TextField(LoginModel.Static.passwordTitle, text: $model.password)
+        TextField(model.passwordTitle, text: $model.password)
     }
 
     var loginButton: some View {
         Button(action: model.loginButtonAction) {
             ZStack {
                 RoundedRectangle(cornerRadius: 8)
-                Text(model.loginButtonTitle)
-                    .font(.title3)
-                    .foregroundColor(.white)
-                    .padding(8)
+                    .foregroundColor(loginButtonColor(with: model.loginResult))
+                if model.loginResult == .loading {
+                    LoadingView()
+                } else {
+                    Text(model.loginButtonTitle)
+                        .font(.title3)
+                        .foregroundColor(.white)
+                        .padding(8)
+                }
             }
             .frame(height: 48, alignment: .center)
         }
+    }
 
+    // MARK: - Helpers
+
+    func loginButtonColor(with status: LoginResult) -> Color {
+        switch model.loginResult {
+        case .neutral, .loading: return .blue
+        case .failure: return .red
+        case .success: return .green
+        }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            LoginView()
-            LoginView()
-                .preferredColorScheme(.dark)
+            LoginView<LoginModel>()
+                .environmentObject(LoginMocks.wrongPasswordMock)
         }
     }
 }
