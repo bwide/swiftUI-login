@@ -34,16 +34,20 @@ protocol AppView: View {
 
 extension AppView where Router.Route == VM.Route {
 
+    /// creates all navigation links necessary to each AppView
     @ViewBuilder
     var navigationLinks: some View {
         ForEach(Array(Router.Route.allCases), id: \.self) {
-            NavigationLink(
-                destination: router.view(for: $0),
-                tag: $0 as! VM.Route, // VM.Route should be equal to Router.Route
-                selection: viewModelEnvironmentObject.navigationRoute,
-                label: { EmptyView() }
-              )
+            if let tag = $0 as? VM.Route {
+                NavigationLink(
+                    destination: router.view(for: $0),
+                    tag: tag,
+                    selection: viewModelEnvironmentObject.navigationRoute,
+                    label: { EmptyView() }
+                  )
+            } else {
+                fatalError("View and ViewModel Routers should be the same.")
+            }
         }
-
     }
 }
