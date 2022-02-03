@@ -8,7 +8,6 @@
 import Foundation
 
 struct LoginMocks {
-
     static let defaultMock: LoginModel = {
         LoginModel()
     }()

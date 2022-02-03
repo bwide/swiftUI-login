@@ -7,8 +7,9 @@
 
 import Foundation
 import SwiftUI
+import Combine
 
-protocol LoginModelProtocol: ObservableObject {
+protocol LoginModelProtocol: ViewModel {
     var loginResult: LoginResult { get }
 
     var usernameTitle: String { get }
@@ -43,4 +44,8 @@ enum LoginErrorPrompt: String {
 
 enum LoginResult {
     case success, failure, loading, neutral
+}
+
+protocol LoginServiceProtocol {
+    func login(_ email: String, _ password: String, completion: @escaping (Bool) -> Void)
 }
